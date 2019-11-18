@@ -10,6 +10,7 @@ class LogoDetail extends StatelessWidget {
       ),
       body: Center(
         child: Column(
+          
           crossAxisAlignment: CrossAxisAlignment.center,
           //mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
