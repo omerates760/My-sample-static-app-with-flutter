@@ -8,7 +8,6 @@ class LogoDetail extends StatelessWidget {
       appBar: AppBar(
         title: Text("Detay Sayfası"),
       ),
-      
       body: Center(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
