@@ -20,6 +20,7 @@ class LogoDetail extends StatelessWidget {
               child: RaisedButton(
                 child: Text("Geriye dön"),
                 onPressed: () => Navigator.pop(context),
+                
               ),
             )
           ],
