@@ -11,7 +11,7 @@ class LogoDetail extends StatelessWidget {
       
       body: Center(
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.end,
           //mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Image.asset("assets/calisma2.jpg"),
