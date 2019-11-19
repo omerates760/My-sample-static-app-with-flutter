@@ -3,7 +3,7 @@ import 'package:firstmy_app/cardData.dart';
 import 'package:firstmy_app/cardcontrol.dart';
 
 class CardManager extends StatefulWidget {
-  final String cardItem;
+  final Map<String,String> cardItem;
   CardManager({this.cardItem}) {}
   @override
   State<StatefulWidget> createState() {
@@ -12,7 +12,7 @@ class CardManager extends StatefulWidget {
 }
 
 class CardManagerState extends State<CardManager> {
-  final List<String> _anyImage = [];
+  final List<Map<String,String>> _anyImage = [];
   @override
   void initState() {
     if (widget.cardItem != null) {
@@ -21,7 +21,7 @@ class CardManagerState extends State<CardManager> {
     super.initState();
   }
 
-  void _addCard(String car) {
+  void _addCard(Map<String,String> car) {
     setState(() {
       _anyImage.add(car);
     });

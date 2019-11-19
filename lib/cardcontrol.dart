@@ -9,7 +9,7 @@ class CardControl extends StatelessWidget {
       color: Theme.of(context).primaryColor,
       onPressed: () {
 
-        addCar("deneme kart");
+        addCar({'title':'yeni test araç,','image':'assets/calisma2.jpg'});
       },
       child: Text("Resim Ekle"),
     );
