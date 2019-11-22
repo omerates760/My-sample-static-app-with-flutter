@@ -1,3 +1,4 @@
+import 'package:firstmy_app/pages/auth.dart';
 import 'package:firstmy_app/pages/home.dart';
 import 'package:flutter/material.dart';
 
@@ -9,6 +10,6 @@ class MyFirstApp extends StatelessWidget {
     return MaterialApp(
         theme: ThemeData(
             primarySwatch: Colors.orange, brightness: Brightness.light),
-        home: HomePage());
+        home: AuthPage());
   }
 }
