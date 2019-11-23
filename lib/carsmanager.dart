@@ -10,7 +10,6 @@ print('Cars manager Constructer');
   @override
   State<StatefulWidget> createState() {
     print('Cars manager cerateState');
-    // TODO: implement createState
     return _CarsManagerState();
   }
 }
@@ -19,7 +18,6 @@ class _CarsManagerState extends State<CarsManager> {
   final List<Map<String,String>> _carpictures = [];
   @override
     void initState() {
-      // TODO: implement initState
       if (widget.startCars != null) {
           _carpictures.add(widget.startCars);
       }
@@ -41,13 +39,11 @@ print('Cars manager State initState');
     }
     @override
       void didUpdateWidget(CarsManager oldWidget) {
-        // TODO: implement didUpdateWidget
         print('Cars manager State didUpdateWidget');
         super.didUpdateWidget(oldWidget);
       }
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     print('Cars manager State');
     return Column(
       children: [
