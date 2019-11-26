@@ -2,9 +2,8 @@ import 'package:flutter/material.dart';
 import './pages/car.dart';
 
 class Cars extends StatelessWidget {
-  final List<Map<String, String>> carpictures;
-  final Function deleteCar;
-  Cars(this.carpictures, {this.deleteCar});
+  final List<Map<String, dynamic>> carpictures;
+  Cars(this.carpictures);
   Widget _buildCarItems(BuildContext context, int index) {
     return Card(
       child: Column(
@@ -17,12 +16,7 @@ class Cars extends StatelessWidget {
               FlatButton(
                   child: Text('Detaylar'),
                   onPressed: () => Navigator.pushNamed<bool>(
-                              context, '/car/' + index.toString())
-                          .then((bool value) {
-                        if (value) {
-                          deleteCar(index);
-                        }
-                      }))
+                      context, '/car/' + index.toString()))
             ],
           )
         ],

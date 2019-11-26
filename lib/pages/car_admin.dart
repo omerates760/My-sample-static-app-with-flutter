@@ -1,9 +1,11 @@
 import 'package:firstmy_app/pages/car_create.dart';
 import 'package:firstmy_app/pages/car_list.dart';
-import 'package:firstmy_app/pages/home.dart';
 import 'package:flutter/material.dart';
 
 class CarAdminPage extends StatelessWidget {
+  final Function addCar;
+  final Function deleteCar;
+  CarAdminPage(this.addCar,this.deleteCar);
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
@@ -41,7 +43,7 @@ class CarAdminPage extends StatelessWidget {
           ),
         ),
         body: TabBarView(
-          children: <Widget>[CarCreatePage(), CarListPage()],
+          children: <Widget>[CarCreatePage(addCar), CarListPage()],
         ),
       ),
     );

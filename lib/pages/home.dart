@@ -2,10 +2,9 @@ import 'package:flutter/material.dart';
 import '../carsmanager.dart';
 
 class HomePage extends StatelessWidget {
-  final List<Map<String, String>> carpictures;
-  final Function addCar;
-  final Function deleteCar;
-  HomePage(this.carpictures, this.addCar, this.deleteCar);
+  final List<Map<String, dynamic>> carpictures;
+
+  HomePage(this.carpictures);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,7 +27,7 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: Text('Test Listesi'),
       ),
-      body: CarsManager(carpictures, addCar, deleteCar),
+      body: CarsManager(carpictures),
     );
   }
 }

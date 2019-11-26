@@ -15,8 +15,8 @@ class MyFirstApp extends StatefulWidget {
 }
 
 class _MyFirstAppState extends State<MyFirstApp> {
-  final List<Map<String, String>> _carpictures = [];
-  void _addCar(Map<String, String> car) {
+  final List<Map<String, dynamic>> _carpictures = [];
+  void _addCar(Map<String, dynamic> car) {
     setState(() {
       _carpictures.add(car);
     });
@@ -35,9 +35,9 @@ class _MyFirstAppState extends State<MyFirstApp> {
           ThemeData(primarySwatch: Colors.orange, brightness: Brightness.light),
       home: AuthPage(),
       routes: {
-        '/goCarAdminPage': (BuildContext context) => CarAdminPage(),
+        '/goCarAdminPage': (BuildContext context) => CarAdminPage( _addCar, _deleteCar),
         '/goHomePage': (BuildContext context) =>
-            HomePage(_carpictures, _addCar, _deleteCar)
+            HomePage(_carpictures)
       },
       onGenerateRoute: (RouteSettings settings) {
         final List<String> pathElements = settings.name.split('/');
