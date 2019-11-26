@@ -12,10 +12,7 @@ class AuthPage extends StatelessWidget {
         child: RaisedButton(
           child: Text("Giriş yap"),
           onPressed: () {
-              Navigator.pushReplacement(
-                  context,
-                  MaterialPageRoute(
-                      builder: (BuildContext context) => HomePage()));
+            Navigator.pushReplacementNamed(context, '/goHomePage');
           },
         ),
       ),
