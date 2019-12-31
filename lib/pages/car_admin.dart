@@ -1,5 +1,6 @@
 import 'package:firstmy_app/pages/car_create.dart';
 import 'package:firstmy_app/pages/car_list.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class CarAdminPage extends StatelessWidget {
@@ -19,6 +20,7 @@ class CarAdminPage extends StatelessWidget {
                 automaticallyImplyLeading: false,
               ),
               ListTile(
+                leading: Icon(Icons.home),
                 title: Text('Ana sayfaya dön'),
                 onTap: () {
                   Navigator.pushReplacementNamed(context, '/goHomePage');

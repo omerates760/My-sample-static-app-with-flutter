@@ -4,10 +4,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter/rendering.dart';
 import './pages/car.dart';
-void main(){
-  debugPaintBaselinesEnabled=true;
-  runApp(MyFirstApp());
 
+void main() {
+  debugPaintBaselinesEnabled = true;
+  runApp(MyFirstApp());
 }
 
 class Cars extends StatelessWidget {
@@ -57,10 +57,16 @@ class Cars extends StatelessWidget {
           ButtonBar(
             alignment: MainAxisAlignment.center,
             children: <Widget>[
-              FlatButton(
-                  child: Text('Detaylar'),
+              IconButton(
+                  icon: Icon(Icons.info),
+                  color: Theme.of(context).primaryColor,
                   onPressed: () => Navigator.pushNamed<bool>(
-                      context, '/car/' + index.toString()))
+                      context, '/car/' + index.toString())),
+              IconButton(
+                icon: Icon(Icons.favorite_border),
+                color: Colors.red,
+                onPressed: () {},
+              )
             ],
           )
         ],
