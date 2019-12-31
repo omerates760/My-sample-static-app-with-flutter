@@ -13,7 +13,7 @@ class _CarCreatePageState extends State<CarCreatePage> {
   String _titleValue;
   String _description;
   double _priceValue;
-  bool _accept;
+  bool _accept=false;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -53,7 +53,7 @@ class _CarCreatePageState extends State<CarCreatePage> {
               value: _accept,
               onChanged: (bool value) {
                 setState(() {
-                  _accept=value;
+                  _accept=true;
                 });
               },title: Text("Kabul ediyor musunuz ?"),
             ),

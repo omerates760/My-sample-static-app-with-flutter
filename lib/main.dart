@@ -35,9 +35,9 @@ class _MyFirstAppState extends State<MyFirstApp> {
           ThemeData(primarySwatch: Colors.orange, brightness: Brightness.light),
       home: AuthPage(),
       routes: {
-        '/goCarAdminPage': (BuildContext context) => CarAdminPage( _addCar, _deleteCar),
-        '/goHomePage': (BuildContext context) =>
-            HomePage(_carpictures)
+        '/goCarAdminPage': (BuildContext context) =>
+            CarAdminPage(_addCar, _deleteCar),
+        '/goHomePage': (BuildContext context) => HomePage(_carpictures)
       },
       onGenerateRoute: (RouteSettings settings) {
         final List<String> pathElements = settings.name.split('/');
@@ -52,6 +52,10 @@ class _MyFirstAppState extends State<MyFirstApp> {
           );
         }
         return null;
+      },
+      onUnknownRoute: (RouteSettings settings) {
+        return MaterialPageRoute(
+            builder: (BuildContext context) => HomePage(_carpictures));
       },
     );
   }

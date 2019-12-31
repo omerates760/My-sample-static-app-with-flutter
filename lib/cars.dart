@@ -1,5 +1,14 @@
+import 'package:firstmy_app/main.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/painting.dart';
+import 'package:flutter/rendering.dart';
 import './pages/car.dart';
+void main(){
+  debugPaintBaselinesEnabled=true;
+  runApp(MyFirstApp());
+
+}
 
 class Cars extends StatelessWidget {
   final List<Map<String, dynamic>> carpictures;
@@ -9,7 +18,42 @@ class Cars extends StatelessWidget {
       child: Column(
         children: <Widget>[
           Image.asset(carpictures[index]['image']),
-          Text(carpictures[index]['title']),
+          Container(
+            padding: EdgeInsets.only(top: 12.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Text(
+                  carpictures[index]['title'],
+                  style: TextStyle(
+                      color: Colors.brown,
+                      fontSize: 25.0,
+                      fontWeight: FontWeight.bold),
+                ),
+                SizedBox(
+                  width: 10.0,
+                ),
+                Container(
+                  padding: EdgeInsets.symmetric(horizontal: 5.0, vertical: 2.5),
+                  decoration: BoxDecoration(
+                    color: Theme.of(context).primaryColor,
+                    borderRadius: BorderRadius.circular(5.0),
+                  ),
+                  child: Text(
+                    '\$${carpictures[index]['price'].toString()}',
+                    style: TextStyle(color: Colors.white),
+                  ),
+                ),
+              ],
+            ),
+          ),
+          Container(
+            padding: EdgeInsets.symmetric(horizontal: 5.0, vertical: 2.5),
+            decoration: BoxDecoration(
+                border: Border.all(color: Colors.grey, width: 1.0),
+                borderRadius: BorderRadius.circular(3.0)),
+            child: Text('İstanbul türkiye'),
+          ),
           ButtonBar(
             alignment: MainAxisAlignment.center,
             children: <Widget>[
